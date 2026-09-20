@@ -36,7 +36,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <span className="font-serif text-2xl font-semibold tracking-wide text-earthy-text">Atelier.</span>
           <div className="hidden md:flex gap-8 text-sm font-medium text-muted-text">
-            <Link href="#gallery" className="hover:text-terracotta transition-colors">Gallery</Link>
+            <Link href="/gallery" className="hover:text-terracotta transition-colors">Gallery</Link>
             <Link href="#process" className="hover:text-terracotta transition-colors">Process</Link>
             <Link href="#contact" className="hover:text-terracotta transition-colors">Contact</Link>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
           </motion.p>
           <motion.div variants={fadeInUp}>
             <Link 
-              href="#gallery" 
+              href="/gallery" 
               className="inline-flex items-center gap-2 bg-earthy-text text-white px-8 py-4 rounded-full font-medium hover:bg-terracotta transition-all duration-300 shadow-xl shadow-earthy-text/10 group"
             >
               Explore Collection
