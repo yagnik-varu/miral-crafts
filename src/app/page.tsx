@@ -189,56 +189,56 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
             <motion.div 
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="md:col-span-7 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
+              className="col-span-2 md:col-span-7 h-[45vh] md:h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="/images/crochet.jpg" alt="Crochet blanket detail" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <p className="font-serif text-3xl">Cozy Textures</p>
-                <p className="text-sm/6 uppercase tracking-wider opacity-80">Crochet</p>
+              <Image src="/images/crochet.jpg" alt="Crochet blanket detail" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-white translate-y-0 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <p className="font-serif text-2xl md:text-3xl drop-shadow-sm">Cozy Textures</p>
+                <p className="text-xs md:text-sm/6 uppercase tracking-wider opacity-90">Crochet</p>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="md:col-span-5 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
+              className="col-span-1 md:col-span-5 h-[30vh] md:h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="/images/embroidery.jpg" alt="Embroidery hoop art" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <p className="font-serif text-3xl">Botanical Hoop</p>
-                <p className="text-sm/6 uppercase tracking-wider opacity-80">Embroidery</p>
+              <Image src="/images/embroidery.jpg" alt="Embroidery hoop art" fill sizes="(max-width: 768px) 50vw, 40vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-white translate-y-0 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <p className="font-serif text-xl md:text-3xl drop-shadow-sm">Botanical Hoop</p>
+                <p className="text-[10px] md:text-sm/6 uppercase tracking-wider opacity-90">Embroidery</p>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="md:col-span-5 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
+              className="col-span-1 md:col-span-5 h-[35vh] md:h-[60vh] mt-8 md:mt-0 relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="/images/yarn.jpg" alt="Yarn collection" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <p className="font-serif text-3xl">Natural Fibers</p>
-                <p className="text-sm/6 uppercase tracking-wider opacity-80">Materials</p>
+              <Image src="/images/yarn.jpg" alt="Yarn collection" fill sizes="(max-width: 768px) 50vw, 40vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 text-white translate-y-0 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <p className="font-serif text-xl md:text-3xl drop-shadow-sm">Natural Fibers</p>
+                <p className="text-[10px] md:text-sm/6 uppercase tracking-wider opacity-90">Materials</p>
               </div>
             </motion.div>
 
             <motion.div 
               whileHover={{ y: -10 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="md:col-span-7 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
+              className="col-span-2 md:col-span-7 h-[40vh] md:h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="/images/custom.jpg" alt="Custom Embroidery piece" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <p className="font-serif text-3xl">Custom Portrait</p>
-                <p className="text-sm/6 uppercase tracking-wider opacity-80">Embroidery</p>
+              <Image src="/images/custom.jpg" alt="Custom Embroidery piece" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-white translate-y-0 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <p className="font-serif text-2xl md:text-3xl drop-shadow-sm">Custom Portrait</p>
+                <p className="text-xs md:text-sm/6 uppercase tracking-wider opacity-90">Embroidery</p>
               </div>
             </motion.div>
           </div>
