@@ -275,66 +275,21 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-terracotta/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/2 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
-            <div>
-              <h2 className="font-serif text-5xl md:text-7xl text-warm-cream mb-8">Let's craft <br/><span className="text-terracotta italic">together.</span></h2>
-              <p className="text-beige/70 text-lg max-w-md leading-relaxed mb-12">
-                Have a specific project in mind? Or perhaps you just want to say hello? I'm currently taking commissions for the upcoming season.
-              </p>
-              
-              <div className="space-y-6">
-                <a href="#" className="flex items-center gap-4 text-warm-cream hover:text-terracotta transition-colors group">
-                  <div className="w-12 h-12 rounded-full border border-warm-cream/20 flex items-center justify-center group-hover:border-terracotta transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                  </div>
-                  <span className="text-lg">@miral.crafts</span>
-                </a>
-                <a href="#" className="flex items-center gap-4 text-warm-cream hover:text-terracotta transition-colors group">
-                  <div className="w-12 h-12 rounded-full border border-warm-cream/20 flex items-center justify-center group-hover:border-terracotta transition-colors">
-                    <MessageSquare size={20} strokeWidth={1.5} />
-                  </div>
-                  <span className="text-lg">Chat on WhatsApp</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="bg-warm-cream rounded-[2rem] p-8 md:p-12 shadow-2xl">
-              <h3 className="font-serif text-3xl text-earthy-text mb-8">Send an Inquiry</h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-muted-text">Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full bg-white border border-earthy-text/10 rounded-xl px-5 py-4 text-earthy-text focus:outline-none focus:ring-2 focus:ring-terracotta/50 focus:border-terracotta transition-all"
-                      placeholder="Jane Doe"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-muted-text">Email</label>
-                    <input 
-                      type="email" 
-                      className="w-full bg-white border border-earthy-text/10 rounded-xl px-5 py-4 text-earthy-text focus:outline-none focus:ring-2 focus:ring-terracotta/50 focus:border-terracotta transition-all"
-                      placeholder="jane@example.com"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-muted-text">Project Details</label>
-                  <textarea 
-                    rows={4}
-                    className="w-full bg-white border border-earthy-text/10 rounded-xl px-5 py-4 text-earthy-text focus:outline-none focus:ring-2 focus:ring-terracotta/50 focus:border-terracotta transition-all resize-none"
-                    placeholder="Tell me about colors, dimensions, and your vision..."
-                  ></textarea>
-                </div>
-                <button 
-                  type="button" 
-                  className="w-full bg-terracotta text-white py-4 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-earthy-text transition-colors duration-300"
-                >
-                  <Send size={18} />
-                  Submit Request
-                </button>
-              </form>
+          <div className="max-w-3xl mx-auto text-center mb-24">
+            <h2 className="font-serif text-5xl md:text-7xl text-warm-cream mb-8">Let's craft <br/><span className="text-terracotta italic">together.</span></h2>
+            <p className="text-beige/70 text-lg mx-auto leading-relaxed mb-12">
+              Have a specific project in mind? Or perhaps you just want to say hello? I'm currently taking commissions for the upcoming season. Let's connect directly!
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <a href="#" className="flex items-center justify-center gap-3 bg-terracotta text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 shadow-xl shadow-terracotta/20 w-full sm:w-auto">
+                <MessageSquare size={20} />
+                <span>Chat on WhatsApp</span>
+              </a>
+              <a href="#" className="flex items-center justify-center gap-3 bg-white/5 text-warm-cream border border-warm-cream/20 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 w-full sm:w-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                <span>@miral.crafts</span>
+              </a>
             </div>
           </div>
 
