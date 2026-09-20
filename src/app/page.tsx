@@ -34,18 +34,21 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-warm-cream/80 backdrop-blur-md border-b border-earthy-text/5 transition-all">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <span className="font-serif text-2xl font-semibold tracking-wide text-earthy-text">Atelier.</span>
+          <Link href="/" className="font-serif text-2xl font-semibold tracking-wide text-earthy-text">Miral.</Link>
           <div className="hidden md:flex gap-8 text-sm font-medium text-muted-text">
             <Link href="/gallery" className="hover:text-terracotta transition-colors">Gallery</Link>
             <Link href="#process" className="hover:text-terracotta transition-colors">Process</Link>
             <Link href="#contact" className="hover:text-terracotta transition-colors">Contact</Link>
           </div>
-          <Link 
-            href="#contact" 
-            className="text-sm font-medium border border-terracotta text-terracotta px-5 py-2.5 rounded-full hover:bg-terracotta hover:text-white transition-all duration-300"
-          >
-            Commission Me
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/gallery" className="md:hidden text-sm font-medium text-muted-text hover:text-terracotta">Gallery</Link>
+            <Link 
+              href="#contact" 
+              className="text-sm font-medium border border-terracotta text-terracotta px-4 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-terracotta hover:text-white transition-all duration-300"
+            >
+              Commission Me
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -227,7 +230,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-full border border-warm-cream/20 flex items-center justify-center group-hover:border-terracotta transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                   </div>
-                  <span className="text-lg">@yarn.thread.atelier</span>
+                  <span className="text-lg">@miral.crafts</span>
                 </a>
                 <a href="#" className="flex items-center gap-4 text-warm-cream hover:text-terracotta transition-colors group">
                   <div className="w-12 h-12 rounded-full border border-warm-cream/20 flex items-center justify-center group-hover:border-terracotta transition-colors">
@@ -279,7 +282,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-warm-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-warm-cream/50 text-sm">
-            <p>© {new Date().getFullYear()} Yarn & Thread Atelier. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Miral Crafts. All rights reserved.</p>
             <p>Designed thoughtfully in the studio.</p>
           </div>
         </div>

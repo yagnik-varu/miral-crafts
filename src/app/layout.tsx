@@ -15,7 +15,7 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Yarn & Thread Atelier | Handmade Crochet & Embroidery",
+  title: "Miral Crafts | Handmade Crochet & Embroidery",
   description: "Bespoke crochet and custom embroidery, made slowly and beautifully.",
 };
 
