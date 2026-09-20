@@ -55,11 +55,68 @@ export default function Home() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center pt-20 px-6">
         <motion.div 
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden"
           style={{ y, opacity }}
         >
           <div className="absolute top-20 left-10 w-72 h-72 bg-terracotta/5 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-beige rounded-full blur-3xl" />
+          
+          {/* Animated Thread Container */}
+          <motion.div
+             className="absolute inset-0 w-full h-full text-terracotta/40"
+             animate={{ y: [0, -15, 0], rotate: [0, 1, -1, 0] }}
+             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <svg className="w-full h-full" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="thread-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="currentColor" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="currentColor" stopOpacity="1" />
+                  <stop offset="100%" stopColor="currentColor" stopOpacity="0.3" />
+                </linearGradient>
+              </defs>
+              
+              {/* Solid Yarn with Drop Shadow */}
+              <motion.path
+                d="M-100 500 C 200 700, 300 100, 500 400 C 600 550, 400 650, 450 300 C 500 -50, 900 200, 850 550 C 800 900, 1100 600, 1500 300"
+                stroke="url(#thread-grad)"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 4.5, ease: "easeInOut", delay: 0.2 }}
+                style={{ filter: 'drop-shadow(0px 8px 12px rgba(193, 124, 102, 0.3))' }}
+              />
+              
+              {/* Dashed Stitches */}
+              <motion.path
+                d="M-50 200 C 300 -100, 500 800, 700 400 C 800 200, 1000 800, 1200 400 C 1300 200, 1400 600, 1500 500"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeDasharray="12 12"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 0.6 }}
+                transition={{ duration: 5, ease: "easeOut", delay: 1 }}
+              />
+
+              {/* Decorative Knots at intersections */}
+              <motion.circle
+                cx="450" cy="300" r="4.5" fill="currentColor"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 0.9 }}
+                transition={{ delay: 2.5, duration: 0.5, type: "spring" }}
+              />
+              <motion.circle
+                cx="850" cy="550" r="4.5" fill="currentColor"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 0.9 }}
+                transition={{ delay: 3.5, duration: 0.5, type: "spring" }}
+              />
+            </svg>
+          </motion.div>
         </motion.div>
 
         <motion.div 
@@ -73,11 +130,11 @@ export default function Home() {
               Handmade Crochet & Embroidery
             </span>
           </motion.div>
-          <motion.h1 variants={fadeInUp} className="font-serif text-6xl md:text-8xl mb-8 leading-[1.1] text-earthy-text">
+          <motion.h1 variants={fadeInUp} className="font-serif text-6xl md:text-8xl mb-8 leading-[1.1] text-earthy-text font-semibold drop-shadow-sm">
             Crafted with Love, <br className="hidden md:block" />
             <span className="italic text-terracotta">Thread by Thread.</span>
           </motion.h1>
-          <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-muted-text mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+          <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-earthy-text/90 mb-12 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-sm">
             Bespoke artwork for your home and lifestyle. Made slowly, beautifully, and exclusively for you.
           </motion.p>
           <motion.div variants={fadeInUp}>
