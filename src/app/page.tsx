@@ -31,26 +31,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-warm-cream selection:bg-terracotta selection:text-white overflow-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-warm-cream/80 backdrop-blur-md border-b border-earthy-text/5 transition-all">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="font-serif text-2xl font-semibold tracking-wide text-earthy-text">Miral.</Link>
-          <div className="hidden md:flex gap-8 text-sm font-medium text-muted-text">
-            <Link href="/gallery" className="hover:text-terracotta transition-colors">Gallery</Link>
-            <Link href="#process" className="hover:text-terracotta transition-colors">Process</Link>
-            <Link href="#contact" className="hover:text-terracotta transition-colors">Contact</Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/gallery" className="md:hidden text-sm font-medium text-muted-text hover:text-terracotta">Gallery</Link>
-            <Link 
-              href="#contact" 
-              className="text-sm font-medium border border-terracotta text-terracotta px-4 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-terracotta hover:text-white transition-all duration-300"
-            >
-              Commission Me
-            </Link>
-          </div>
-        </div>
-      </nav>
+
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center pt-20 px-6">
@@ -67,7 +48,8 @@ export default function Home() {
              animate={{ y: [0, -15, 0], rotate: [0, 1, -1, 0] }}
              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           >
-            <svg className="w-full h-full" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            {/* Desktop SVG */}
+            <svg className="hidden md:block w-full h-full" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="thread-grad" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="currentColor" stopOpacity="0.3" />
@@ -114,6 +96,45 @@ export default function Home() {
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 0.9 }}
                 transition={{ delay: 3.5, duration: 0.5, type: "spring" }}
+              />
+            </svg>
+
+            {/* Mobile SVG */}
+            <svg className="block md:hidden w-full h-full" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="thread-grad-mobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="currentColor" stopOpacity="0.3" />
+                  <stop offset="50%" stopColor="currentColor" stopOpacity="1" />
+                  <stop offset="100%" stopColor="currentColor" stopOpacity="0.3" />
+                </linearGradient>
+              </defs>
+              <motion.path
+                d="M-50 200 C 150 400, 300 0, 350 300 C 400 600, 100 500, 200 700 C 300 900, 100 900, -50 900"
+                stroke="url(#thread-grad-mobile)"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 4.5, ease: "easeInOut", delay: 0.2 }}
+                style={{ filter: 'drop-shadow(0px 8px 12px rgba(193, 124, 102, 0.3))' }}
+              />
+              <motion.path
+                d="M 450 100 C 200 50, 0 300, 150 500 C 300 700, 100 800, -50 850"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeDasharray="12 12"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 0.6 }}
+                transition={{ duration: 5, ease: "easeOut", delay: 1 }}
+              />
+              <motion.circle
+                cx="250" cy="300" r="4.5" fill="currentColor"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 0.9 }}
+                transition={{ delay: 2.5, duration: 0.5, type: "spring" }}
               />
             </svg>
           </motion.div>
