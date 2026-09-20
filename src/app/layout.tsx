@@ -18,6 +18,11 @@ const publicSans = Public_Sans({
 export const metadata: Metadata = {
   title: "Miral Crafts | Handmade Crochet & Embroidery",
   description: "Bespoke crochet and custom embroidery, made slowly and beautifully.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
