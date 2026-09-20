@@ -114,7 +114,7 @@ export default function Home() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="md:col-span-7 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="https://images.unsplash.com/photo-1606722590583-6951b5ea92ad?auto=format&fit=crop&w=1200&q=80" alt="Crochet blanket detail" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/images/crochet.jpg" alt="Crochet blanket detail" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <p className="font-serif text-3xl">Cozy Textures</p>
@@ -127,7 +127,7 @@ export default function Home() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="md:col-span-5 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="https://images.unsplash.com/photo-1610444319808-14fc3f1d3e81?auto=format&fit=crop&w=800&q=80" alt="Embroidery hoop art" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/images/embroidery.jpg" alt="Embroidery hoop art" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <p className="font-serif text-3xl">Botanical Hoop</p>
@@ -140,7 +140,7 @@ export default function Home() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="md:col-span-5 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=800&q=80" alt="Yarn collection" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/images/yarn.jpg" alt="Yarn collection" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <p className="font-serif text-3xl">Natural Fibers</p>
@@ -153,7 +153,7 @@ export default function Home() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="md:col-span-7 h-[60vh] relative rounded-[2rem] overflow-hidden group shadow-lg"
             >
-              <Image src="https://images.unsplash.com/photo-1626296711675-0e1ce8e13639?auto=format&fit=crop&w=1200&q=80" alt="Custom Embroidery piece" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/images/custom.jpg" alt="Custom Embroidery piece" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-8 left-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <p className="font-serif text-3xl">Custom Portrait</p>
