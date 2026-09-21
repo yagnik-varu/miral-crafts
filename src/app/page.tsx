@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import { MessageSquare, Scissors, Package, Send } from "lucide-react";
+import { MessageSquare, Scissors, Package, Send, Mail } from "lucide-react";
 import { useRef } from "react";
 
 const fadeInUp: Variants = {
@@ -28,6 +28,23 @@ export default function Home() {
   
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  const rawWhatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "";
+  const cleanWhatsapp = rawWhatsapp.replace(/[^0-9]/g, "");
+  const whatsappUrl = cleanWhatsapp ? `https://wa.me/${cleanWhatsapp}` : "#";
+
+  const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
+  const emailUrl = contactEmail ? `mailto:${contactEmail}` : "#";
+
+  const rawInstagram = process.env.NEXT_PUBLIC_INSTAGRAM_HANDLE || "miral.crafts";
+  const cleanInstagramHandle = rawInstagram
+    .replace(/^https?:\/\/(www\.)?instagram\.com\//, "")
+    .replace(/^@/, "")
+    .replace(/\/$/, "");
+  const instagramUrl = rawInstagram.startsWith("http")
+    ? rawInstagram
+    : `https://instagram.com/${cleanInstagramHandle}`;
+  const instagramLabel = cleanInstagramHandle ? `@${cleanInstagramHandle}` : "@instagram";
 
   return (
     <main className="min-h-screen bg-warm-cream selection:bg-terracotta selection:text-white overflow-hidden">
@@ -184,9 +201,14 @@ export default function Home() {
               <h2 className="font-serif text-5xl md:text-6xl text-earthy-text mb-4">Selected Works</h2>
               <p className="text-muted-text text-lg max-w-md">A glimpse into recent bespoke pieces, balancing traditional techniques with modern aesthetics.</p>
             </div>
-            <Link href="#contact" className="text-terracotta font-medium hover:underline underline-offset-4">
+            <a 
+              href={instagramUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-terracotta font-medium hover:underline underline-offset-4"
+            >
               See more on Instagram →
-            </Link>
+            </a>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6">
@@ -302,14 +324,33 @@ export default function Home() {
               Have a specific project in mind? Or perhaps you just want to say hello? I'm currently taking commissions for the upcoming season. Let's connect directly!
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href="#" className="flex items-center justify-center gap-3 bg-terracotta text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 shadow-xl shadow-terracotta/20 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 md:gap-6">
+              <a 
+                href={whatsappUrl} 
+                target={cleanWhatsapp ? "_blank" : undefined}
+                rel={cleanWhatsapp ? "noopener noreferrer" : undefined}
+                className="flex items-center justify-center gap-3 bg-terracotta text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 shadow-xl shadow-terracotta/20 w-full sm:w-auto"
+              >
                 <MessageSquare size={20} />
                 <span>Chat on WhatsApp</span>
               </a>
-              <a href="#" className="flex items-center justify-center gap-3 bg-white/5 text-warm-cream border border-warm-cream/20 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 w-full sm:w-auto">
+
+              <a 
+                href={emailUrl}
+                className="flex items-center justify-center gap-3 bg-white/5 text-warm-cream border border-warm-cream/20 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 w-full sm:w-auto"
+              >
+                <Mail size={20} />
+                <span>{contactEmail || "Email Us"}</span>
+              </a>
+
+              <a 
+                href={instagramUrl} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 bg-white/5 text-warm-cream border border-warm-cream/20 px-8 py-4 rounded-full font-medium hover:bg-white hover:text-earthy-text transition-all duration-300 w-full sm:w-auto"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                <span>@miral.crafts</span>
+                <span>{instagramLabel}</span>
               </a>
             </div>
           </div>
