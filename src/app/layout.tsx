@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant, Public_Sans } from "next/font/google";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const cormorant = Cormorant({ 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </nav>
         {children}
+        <Footer />
       </body>
     </html>
   );
